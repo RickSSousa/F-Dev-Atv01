@@ -16,7 +16,7 @@ namespace Ex01.Models
         public string Email { get; set; }
         [DisplayName("Contato")]
         public string Telefone { get; set; }
-        [DisplayName("Confirmação")]
+        [DisplayName("Comparecimento")]
         public bool? Comparecimento { get; set; }
     }
 }

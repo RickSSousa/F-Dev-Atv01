@@ -37,7 +37,18 @@
                 <div>
                     <dl>
                         <dd class="col-sm-10">
-                             @Html.DisplayFor(model => model.Comparecimento)
+                            @if (Model.Comparecimento == true)
+                            {
+                                <p>Sim</p>
+                            }
+                            else if (Model.Comparecimento == false)
+                            {
+                                <p>Não</p>
+                            }
+                            else
+                            {
+                                <p>Indefinido</p>
+                            }
                         </dd>
                     </dl>
                 </div>

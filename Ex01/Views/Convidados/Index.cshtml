@@ -46,12 +46,23 @@
                 @Html.DisplayFor(modelItem => item.Telefone)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Comparecimento)
+                @if(item.Comparecimento == true)
+                {
+                    <p>Sim</p>
+                }
+                else if(item.Comparecimento == false)
+                {
+                    <p>Não</p >
+                }
+                else
+                {
+                    <p>Indefinido</p >
+                }
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.ConvidadoId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.ConvidadoId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.ConvidadoId })
+                @Html.ActionLink("Editar", "Edit", new { id=item.ConvidadoId }) |
+                @Html.ActionLink("Detalhes", "Details", new { id=item.ConvidadoId }) |
+                @Html.ActionLink("Deletar", "Delete", new { id=item.ConvidadoId })
             </td>
         </tr>
 }
